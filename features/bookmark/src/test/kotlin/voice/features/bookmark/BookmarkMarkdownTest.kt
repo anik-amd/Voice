@@ -92,6 +92,27 @@ class BookmarkMarkdownTest {
   }
 
   @Test
+  fun `a note with a line break stays on the bookmark line`() {
+    val chapter = testChapter()
+    val book = testBook(listOf(chapter))
+
+    assertEquals(
+      """
+      # Echoes of Tomorrow
+
+      ## Chapter 1
+
+      [00:00:10] First line second line
+      """
+        .trimIndent() + "\n",
+      bookmarksMarkdown(
+        book,
+        listOf(testBookmark(chapter, 10.seconds, title = "First line\n  second line")),
+      ),
+    )
+  }
+
+  @Test
   fun `the file name drops characters that a file system rejects`() {
     assertEquals(
       "A_B_ C Bookmarks.md",

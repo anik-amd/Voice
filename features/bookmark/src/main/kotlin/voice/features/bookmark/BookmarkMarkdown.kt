@@ -30,7 +30,7 @@ internal fun bookmarksMarkdown(
         append(timestamp(location.timeInChapter))
         append("]")
         bookmark.title
-          ?.trim()
+          ?.oneLine()
           ?.takeIf { it.isNotEmpty() }
           ?.let { note ->
             append(" ")
@@ -46,6 +46,8 @@ internal fun bookmarksFileName(bookTitle: String): String {
   val name = bookTitle.replace(Regex("""[\\/:*?"<>|\p{Cntrl}]"""), "_").trim()
   return "${name.ifEmpty { "Bookmarks" }} Bookmarks.md"
 }
+
+private fun String.oneLine(): String = trim().replace(Regex("\\s+"), " ")
 
 private fun timestamp(timeMs: Long): String {
   val seconds = (timeMs / 1000).coerceAtLeast(0)

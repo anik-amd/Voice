@@ -103,6 +103,8 @@ object BookmarkProvider {
     }
 }
 
+private val markdownDocument = ActivityResultContracts.CreateDocument("text/markdown")
+
 @Composable
 fun BookmarkScreen(
   bookId: BookId,
@@ -127,8 +129,7 @@ fun BookmarkScreen(
   val scope = rememberCoroutineScope()
   var pendingMarkdown by rememberSaveable { mutableStateOf<String?>(null) }
   val saveMarkdown =
-    rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/markdown")) { uri
-      ->
+    rememberLauncherForActivityResult(markdownDocument) { uri ->
       val markdown = pendingMarkdown ?: return@rememberLauncherForActivityResult
       pendingMarkdown = null
       if (uri == null) return@rememberLauncherForActivityResult
@@ -247,7 +248,7 @@ private fun BookmarkScreen(
           author = viewState.bookAuthor,
           sort = viewState.sort.takeIf { tab == BookmarkTab.Bookmarks },
           onSortChange = onSortChange,
-          onExport = onExport.takeIf { tab == BookmarkTab.Bookmarks },
+          onExport = onExport.takeIf { tab == BookmarkTab.Bookmarks && viewState.totalCount > 0 },
           onClose = onClose,
         )
       },

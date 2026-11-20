@@ -17,6 +17,7 @@ import io.mockk.verifyOrder
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
+import kotlin.test.assertIs
 import kotlin.test.assertNull
 import kotlin.test.assertTrue
 import kotlin.time.Clock
@@ -249,6 +250,32 @@ class BookmarkViewModelTest {
       viewModel.onUndoDelete(bookmark)
       awaitState { it.totalCount == 1 }
       assertEquals(expected = listOf(bookmark), actual = bookmarkRepo.bookmarks.value)
+    }
+  }
+
+  @Test
+  fun `exporting hands the bookmarks of the book over as markdown`() {
+    bookmarkRepo.bookmarks.value = listOf(testBookmark(signal, 2.minutes, title = "Static"))
+    val viewModel = viewModel()
+    viewModel.test {
+      awaitState { it.totalCount == 1 }
+      viewModel.viewEffects.test {
+        viewModel.onExportClick()
+        val export = assertIs<BookmarkViewEffect.Export>(awaitItem())
+        assertEquals(expected = "Echoes of Tomorrow Bookmarks.md", actual = export.fileName)
+        assertEquals(
+          expected =
+            """
+            # Echoes of Tomorrow
+
+            ## Chapter 2
+
+            [00:02:00] Static
+            """
+              .trimIndent() + "\n",
+          actual = export.markdown,
+        )
+      }
     }
   }
 
