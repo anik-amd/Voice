@@ -28,7 +28,11 @@ jobs:
             echo "updated=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          git merge --no-edit upstream/main
+          git merge --no-edit upstream/main || {
+            git merge --abort
+            echo "::error::Upstream changed the same lines. Merge it locally and resolve the conflict."
+            exit 1
+          }
           git push origin HEAD:personal-build
           echo "updated=true" >> "$GITHUB_OUTPUT"
 
