@@ -24,16 +24,17 @@ class BookmarkMarkdownTest {
 
     assertEquals(
       """
-        # Echoes of Tomorrow
+      # Echoes of Tomorrow
 
-        ## Wake up
+      ## Wake up
 
-        [00:01:00] first
+      [00:01:00] first
 
-        ## The signal
+      ## The signal
 
-        [00:01:30] second
-      """.trimIndent() + "\n",
+      [00:01:30] second
+      """
+        .trimIndent() + "\n",
       bookmarksMarkdown(book, bookmarks),
     )
   }
@@ -45,12 +46,13 @@ class BookmarkMarkdownTest {
 
     assertEquals(
       """
-        # Echoes of Tomorrow
+      # Echoes of Tomorrow
 
-        ## Chapter 1
+      ## Chapter 1
 
-        [00:01:00]
-      """.trimIndent() + "\n",
+      [00:01:00]
+      """
+        .trimIndent() + "\n",
       bookmarksMarkdown(book, listOf(testBookmark(chapter, 1.minutes))),
     )
   }
@@ -62,12 +64,13 @@ class BookmarkMarkdownTest {
 
     assertEquals(
       """
-        # Echoes of Tomorrow
+      # Echoes of Tomorrow
 
-        ## Chapter 1
+      ## Chapter 1
 
-        [01:02:03]
-      """.trimIndent() + "\n",
+      [01:02:03]
+      """
+        .trimIndent() + "\n",
       bookmarksMarkdown(
         book,
         listOf(testBookmark(chapter, 1.hours + 2.minutes + 3.seconds)),
@@ -81,8 +84,9 @@ class BookmarkMarkdownTest {
 
     assertEquals(
       """
-        # Echoes of Tomorrow
-      """.trimIndent() + "\n",
+      # Echoes of Tomorrow
+      """
+        .trimIndent() + "\n",
       bookmarksMarkdown(book, emptyList()),
     )
   }

@@ -29,10 +29,13 @@ internal fun bookmarksMarkdown(
         append("\n[")
         append(timestamp(location.timeInChapter))
         append("]")
-        bookmark.title?.trim()?.takeIf { it.isNotEmpty() }?.let { note ->
-          append(" ")
-          append(note)
-        }
+        bookmark.title
+          ?.trim()
+          ?.takeIf { it.isNotEmpty() }
+          ?.let { note ->
+            append(" ")
+            append(note)
+          }
         append("\n")
       }
     }

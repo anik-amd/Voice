@@ -119,5 +119,6 @@ internal data class BookmarkEditorViewState(
 
 internal sealed interface BookmarkViewEffect {
   data class Deleted(val bookmark: Bookmark) : BookmarkViewEffect
+
   data class Export(val markdown: String, val fileName: String) : BookmarkViewEffect
 }

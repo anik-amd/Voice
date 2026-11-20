@@ -127,8 +127,8 @@ fun BookmarkScreen(
   val scope = rememberCoroutineScope()
   var pendingMarkdown by rememberSaveable { mutableStateOf<String?>(null) }
   val saveMarkdown =
-    rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/markdown")) {
-      uri ->
+    rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/markdown")) { uri
+      ->
       val markdown = pendingMarkdown ?: return@rememberLauncherForActivityResult
       pendingMarkdown = null
       if (uri == null) return@rememberLauncherForActivityResult
@@ -139,7 +139,8 @@ fun BookmarkScreen(
               context.contentResolver.openOutputStream(uri)?.use { output ->
                 output.write(markdown.toByteArray())
               } ?: error("The file has no output stream")
-            }.isSuccess
+            }
+              .isSuccess
           }
         if (!written) snackbarHostState.showSnackbar(exportFailed)
       }
