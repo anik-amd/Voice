@@ -57,3 +57,11 @@ jobs:
           name: voice-personal-debug-apk
           path: app/build/outputs/apk/free/debug/*.apk
           if-no-files-found: error
+      - name: Publish the APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view personal > /dev/null 2>&1; then
+            gh release create personal --title "Voice personal build" --notes "The newest personal build of Voice."
+          fi
+          gh release upload personal app/build/outputs/apk/free/debug/*.apk --clobber
