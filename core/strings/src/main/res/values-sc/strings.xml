@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Modìfica su sinnalibru</string>
     <string name="bookmark.empty.message">Pro sarvare unu momentu, mantene incarcadu su butone de sos sinnalibros cando ses ascurtende.</string>
     <string name="bookmark.empty.title">Galu perunu sinnalibru</string>
+    <string name="bookmark.export">Esporta sos sinnalibros</string>
+    <string name="bookmark.export_failed">Non faghet a esportare sos sinnalibros</string>
     <string name="bookmark.kind.favorite">Preferidu</string>
     <string name="bookmark.kind.note">Nota</string>
     <string name="bookmark.kind.quote">Tzitatzione</string>

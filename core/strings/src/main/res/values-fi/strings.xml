@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Muokkaa kirjanmerkkiä</string>
     <string name="bookmark.empty.message">Tallenna hetki pitämällä kirjanmerkkipainiketta painettuna kuuntelun aikana.</string>
     <string name="bookmark.empty.title">Ei vielä kirjanmerkkejä</string>
+    <string name="bookmark.export">Vie kirjanmerkit</string>
+    <string name="bookmark.export_failed">Kirjanmerkkien vienti ei onnistunut</string>
     <string name="bookmark.kind.favorite">Suosikki</string>
     <string name="bookmark.kind.note">Muistiinpano</string>
     <string name="bookmark.kind.quote">Lainaus</string>

@@ -92,6 +92,7 @@ icon expand_more
 icon fast_forward
 icon fast_rewind
 icon favorite
+icon file_export
 icon folder
 icon format_quote
 icon forum

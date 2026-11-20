@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Επεξεργασία σελιδοδείκτη</string>
     <string name="bookmark.empty.message">Πατήστε παρατεταμένα το κουμπί σελιδοδείκτη κατά την ακρόαση για να αποθηκεύσετε μια στιγμή.</string>
     <string name="bookmark.empty.title">Δεν υπάρχουν ακόμη σελιδοδείκτες</string>
+    <string name="bookmark.export">Εξαγωγή σελιδοδεικτών</string>
+    <string name="bookmark.export_failed">Δεν ήταν δυνατή η εξαγωγή των σελιδοδεικτών</string>
     <string name="bookmark.kind.favorite">Αγαπημένο</string>
     <string name="bookmark.kind.note">Σημείωση</string>
     <string name="bookmark.kind.quote">Απόσπασμα</string>

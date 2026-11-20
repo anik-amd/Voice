@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Rediger bogmærke</string>
     <string name="bookmark.empty.message">Hold bogmærkeknappen nede, mens du lytter, for at gemme et øjeblik.</string>
     <string name="bookmark.empty.title">Ingen bogmærker endnu</string>
+    <string name="bookmark.export">Eksportér bogmærker</string>
+    <string name="bookmark.export_failed">Bogmærkerne kunne ikke eksporteres</string>
     <string name="bookmark.kind.favorite">Favorit</string>
     <string name="bookmark.kind.note">Note</string>
     <string name="bookmark.kind.quote">Citat</string>

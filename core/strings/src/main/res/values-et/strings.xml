@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Muuda järjehoidjat</string>
     <string name="bookmark.empty.message">Hetke salvestamiseks vajuta kuulamise ajal pikalt järjehoidja nuppu.</string>
     <string name="bookmark.empty.title">Järjehoidjaid veel pole</string>
+    <string name="bookmark.export">Ekspordi järjehoidjad</string>
+    <string name="bookmark.export_failed">Järjehoidjaid ei õnnestunud eksportida</string>
     <string name="bookmark.kind.favorite">Lemmik</string>
     <string name="bookmark.kind.note">Märkus</string>
     <string name="bookmark.kind.quote">Tsitaat</string>

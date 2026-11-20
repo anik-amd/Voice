@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Уреди обележувач</string>
     <string name="bookmark.empty.message">Долго притиснете го копчето за обележување додека слушате за да зачувате момент.</string>
     <string name="bookmark.empty.title">Сè уште нема обележувачи</string>
+    <string name="bookmark.export">Извези обележувачи</string>
+    <string name="bookmark.export_failed">Не успеавме да ги извеземе обележувачите</string>
     <string name="bookmark.kind.favorite">Омилено</string>
     <string name="bookmark.kind.note">Белешка</string>
     <string name="bookmark.kind.quote">Цитат</string>

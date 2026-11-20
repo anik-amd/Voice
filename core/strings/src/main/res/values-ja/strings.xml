@@ -99,6 +99,8 @@
     <string name="bookmark.edit.title">ブックマークを編集</string>
     <string name="bookmark.empty.message">再生中にブックマークボタンを長押しすると、その瞬間を保存できます。</string>
     <string name="bookmark.empty.title">ブックマークはまだありません</string>
+    <string name="bookmark.export">ブックマークをエクスポート</string>
+    <string name="bookmark.export_failed">ブックマークをエクスポートできませんでした</string>
     <string name="bookmark.kind.favorite">お気に入り</string>
     <string name="bookmark.kind.note">メモ</string>
     <string name="bookmark.kind.quote">引用</string>

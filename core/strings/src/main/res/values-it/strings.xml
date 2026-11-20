@@ -105,6 +105,8 @@
     <string name="bookmark.edit.title">Modifica segnalibro</string>
     <string name="bookmark.empty.message">Durante l\'ascolto, tieni premuto il pulsante segnalibro per salvare un momento.</string>
     <string name="bookmark.empty.title">Ancora nessun segnalibro</string>
+    <string name="bookmark.export">Esporta segnalibri</string>
+    <string name="bookmark.export_failed">Impossibile esportare i segnalibri</string>
     <string name="bookmark.kind.favorite">Preferito</string>
     <string name="bookmark.kind.note">Nota</string>
     <string name="bookmark.kind.quote">Citazione</string>

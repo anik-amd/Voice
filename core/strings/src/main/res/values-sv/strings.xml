@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Redigera bokmärke</string>
     <string name="bookmark.empty.message">Håll in bokmärkesknappen medan du lyssnar för att spara ett ögonblick.</string>
     <string name="bookmark.empty.title">Inga bokmärken än</string>
+    <string name="bookmark.export">Exportera bokmärken</string>
+    <string name="bookmark.export_failed">Det gick inte att exportera bokmärkena</string>
     <string name="bookmark.kind.favorite">Favorit</string>
     <string name="bookmark.kind.note">Anteckning</string>
     <string name="bookmark.kind.quote">Citat</string>

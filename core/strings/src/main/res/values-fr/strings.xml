@@ -105,6 +105,8 @@
     <string name="bookmark.edit.title">Modifier le marque-page</string>
     <string name="bookmark.empty.message">Pendant l\'écoute, appuyez longuement sur le bouton marque-page pour enregistrer un moment.</string>
     <string name="bookmark.empty.title">Aucun marque-page pour l\'instant</string>
+    <string name="bookmark.export">Exporter les marque-pages</string>
+    <string name="bookmark.export_failed">Impossible d\'exporter les marque-pages</string>
     <string name="bookmark.kind.favorite">Favori</string>
     <string name="bookmark.kind.note">Note</string>
     <string name="bookmark.kind.quote">Citation</string>

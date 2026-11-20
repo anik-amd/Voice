@@ -108,6 +108,8 @@
     <string name="bookmark.edit.title">Edytuj zakładkę</string>
     <string name="bookmark.empty.message">Przytrzymaj przycisk zakładki podczas słuchania, aby zapisać chwilę.</string>
     <string name="bookmark.empty.title">Brak zakładek</string>
+    <string name="bookmark.export">Eksportuj zakładki</string>
+    <string name="bookmark.export_failed">Nie udało się wyeksportować zakładek</string>
     <string name="bookmark.kind.favorite">Ulubiona</string>
     <string name="bookmark.kind.note">Notatka</string>
     <string name="bookmark.kind.quote">Cytat</string>

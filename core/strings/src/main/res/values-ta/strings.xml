@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">புக்மார்க்கைத் திருத்து</string>
     <string name="bookmark.empty.message">கேட்கும்போது ஒரு தருணத்தைச் சேமிக்க, புக்மார்க் பொத்தானை நீண்ட நேரம் அழுத்தவும்.</string>
     <string name="bookmark.empty.title">இன்னும் புக்மார்க்குகள் இல்லை</string>
+    <string name="bookmark.export">புக்மார்க்குகளை ஏற்றுமதி செய்</string>
+    <string name="bookmark.export_failed">புக்மார்க்குகளை ஏற்றுமதி செய்ய முடியவில்லை</string>
     <string name="bookmark.kind.favorite">பிடித்தது</string>
     <string name="bookmark.kind.note">குறிப்பு</string>
     <string name="bookmark.kind.quote">மேற்கோள்</string>

@@ -99,6 +99,8 @@
     <string name="bookmark.edit.title">編輯書籤</string>
     <string name="bookmark.empty.message">收聽時長按書籤按鈕，就能記下這一刻。</string>
     <string name="bookmark.empty.title">還沒有書籤</string>
+    <string name="bookmark.export">匯出書籤</string>
+    <string name="bookmark.export_failed">無法匯出書籤</string>
     <string name="bookmark.kind.favorite">最愛</string>
     <string name="bookmark.kind.note">筆記</string>
     <string name="bookmark.kind.quote">摘錄</string>

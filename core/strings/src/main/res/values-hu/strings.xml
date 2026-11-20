@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Könyvjelző szerkesztése</string>
     <string name="bookmark.empty.message">Hallgatás közben tartsa lenyomva a könyvjelző gombot egy pillanat mentéséhez.</string>
     <string name="bookmark.empty.title">Még nincsenek könyvjelzők</string>
+    <string name="bookmark.export">Könyvjelzők exportálása</string>
+    <string name="bookmark.export_failed">Nem sikerült exportálni a könyvjelzőket</string>
     <string name="bookmark.kind.favorite">Kedvenc</string>
     <string name="bookmark.kind.note">Jegyzet</string>
     <string name="bookmark.kind.quote">Idézet</string>

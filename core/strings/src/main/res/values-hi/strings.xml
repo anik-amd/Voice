@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">बुकमार्क संपादन</string>
     <string name="bookmark.empty.message">कोई पल सहेजने के लिए सुनते समय बुकमार्क बटन को देर तक दबाएँ।</string>
     <string name="bookmark.empty.title">अभी तक कोई बुकमार्क नहीं</string>
+    <string name="bookmark.export">बुकमार्क निर्यात करें</string>
+    <string name="bookmark.export_failed">बुकमार्क निर्यात नहीं हो सके</string>
     <string name="bookmark.kind.favorite">पसंदीदा</string>
     <string name="bookmark.kind.note">नोट</string>
     <string name="bookmark.kind.quote">उद्धरण</string>

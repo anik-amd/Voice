@@ -105,6 +105,8 @@
     <string name="bookmark.edit.title">Editar marcador</string>
     <string name="bookmark.empty.message">Mantén pulsado el botón de marcador mientras escuchas para guardar un momento.</string>
     <string name="bookmark.empty.title">Aún no hay marcadores</string>
+    <string name="bookmark.export">Exportar marcadores</string>
+    <string name="bookmark.export_failed">No se pudieron exportar los marcadores</string>
     <string name="bookmark.kind.favorite">Favorito</string>
     <string name="bookmark.kind.note">Nota</string>
     <string name="bookmark.kind.quote">Cita</string>

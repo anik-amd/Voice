@@ -2,6 +2,8 @@
 
 package voice.features.bookmark
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -42,12 +44,14 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.retain.retain
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -61,6 +65,9 @@ import dev.zacsweers.metro.ContributesTo
 import dev.zacsweers.metro.IntoSet
 import dev.zacsweers.metro.Provides
 import java.text.NumberFormat
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import voice.core.common.rootGraphAs
 import voice.core.data.BookId
 import voice.core.strings.R
@@ -115,6 +122,28 @@ fun BookmarkScreen(
 
   val deletedMessage = stringResource(R.string.bookmark_deleted)
   val undoLabel = stringResource(R.string.common_action_undo)
+  val exportFailed = stringResource(R.string.bookmark_export_failed)
+  val context = LocalContext.current
+  val scope = rememberCoroutineScope()
+  var pendingMarkdown by rememberSaveable { mutableStateOf<String?>(null) }
+  val saveMarkdown =
+    rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/markdown")) {
+      uri ->
+      val markdown = pendingMarkdown ?: return@rememberLauncherForActivityResult
+      pendingMarkdown = null
+      if (uri == null) return@rememberLauncherForActivityResult
+      scope.launch {
+        val written =
+          withContext(Dispatchers.IO) {
+            runCatching {
+              context.contentResolver.openOutputStream(uri)?.use { output ->
+                output.write(markdown.toByteArray())
+              } ?: error("The file has no output stream")
+            }.isSuccess
+          }
+        if (!written) snackbarHostState.showSnackbar(exportFailed)
+      }
+    }
   LaunchedEffect(viewModel) {
     viewModel.viewEffects.collect { effect ->
       when (effect) {
@@ -129,6 +158,10 @@ fun BookmarkScreen(
             viewModel.onUndoDelete(effect.bookmark)
           }
         }
+        is BookmarkViewEffect.Export -> {
+          pendingMarkdown = effect.markdown
+          saveMarkdown.launch(effect.fileName)
+        }
       }
     }
   }
@@ -142,6 +175,7 @@ fun BookmarkScreen(
       onSortChange = viewModel::onSortChange,
       onSaveClick = viewModel::onSaveClick,
       onTabChange = viewModel::onTabChange,
+      onExport = viewModel::onExportClick,
       bookmarkList = { listState, contentPadding ->
         BookmarkList(
           viewState = viewState,
@@ -188,6 +222,7 @@ private fun BookmarkScreen(
   onSortChange: (BookmarkSort) -> Unit,
   onSaveClick: () -> Unit,
   onTabChange: (BookmarkTab) -> Unit,
+  onExport: () -> Unit,
   bookmarkList: @Composable (LazyListState, PaddingValues) -> Unit,
   historyList: @Composable (PaddingValues) -> Unit,
 ) {
@@ -211,6 +246,7 @@ private fun BookmarkScreen(
           author = viewState.bookAuthor,
           sort = viewState.sort.takeIf { tab == BookmarkTab.Bookmarks },
           onSortChange = onSortChange,
+          onExport = onExport.takeIf { tab == BookmarkTab.Bookmarks },
           onClose = onClose,
         )
       },
@@ -286,6 +322,7 @@ private fun BookmarkTopBar(
   author: String?,
   sort: BookmarkSort?,
   onSortChange: (BookmarkSort) -> Unit,
+  onExport: (() -> Unit)?,
   onClose: () -> Unit,
 ) {
   TopAppBar(
@@ -318,6 +355,14 @@ private fun BookmarkTopBar(
       }
     },
     actions = {
+      if (onExport != null) {
+        IconButton(onClick = onExport) {
+          Icon(
+            painterResource(UiR.drawable.ic_file_export),
+            contentDescription = stringResource(R.string.bookmark_export),
+          )
+        }
+      }
       if (sort != null) {
         SortMenu(sort = sort, onSortChange = onSortChange)
       }

@@ -108,6 +108,8 @@
     <string name="bookmark.edit.title">Upraviť záložku</string>
     <string name="bookmark.empty.message">Ak chcete uložiť moment, počas počúvania podržte tlačidlo záložky.</string>
     <string name="bookmark.empty.title">Zatiaľ žiadne záložky</string>
+    <string name="bookmark.export">Exportovať záložky</string>
+    <string name="bookmark.export_failed">Záložky sa nepodarilo exportovať</string>
     <string name="bookmark.kind.favorite">Obľúbené</string>
     <string name="bookmark.kind.note">Poznámka</string>
     <string name="bookmark.kind.quote">Citát</string>

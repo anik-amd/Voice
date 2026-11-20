@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">ویرایش نشانه</string>
     <string name="bookmark.empty.message">هنگام گوش دادن، دکمهٔ نشانه را نگه دارید تا این لحظه ذخیره شود.</string>
     <string name="bookmark.empty.title">هنوز نشانه‌ای ندارید</string>
+    <string name="bookmark.export">خروجی گرفتن از نشانه‌ها</string>
+    <string name="bookmark.export_failed">خروجی گرفتن از نشانه‌ها ممکن نشد</string>
     <string name="bookmark.kind.favorite">مورد علاقه</string>
     <string name="bookmark.kind.note">یادداشت</string>
     <string name="bookmark.kind.quote">نقل‌قول</string>

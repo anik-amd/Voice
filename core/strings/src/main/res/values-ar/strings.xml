@@ -114,6 +114,8 @@
     <string name="bookmark.edit.title">تعديل العلامة المرجعية</string>
     <string name="bookmark.empty.message">يمكنك الضغط مطولًا على زر العلامة المرجعية أثناء الاستماع لحفظ لحظة.</string>
     <string name="bookmark.empty.title">لا توجد علامات مرجعية بعد</string>
+    <string name="bookmark.export">تصدير العلامات المرجعية</string>
+    <string name="bookmark.export_failed">تعذّر تصدير العلامات المرجعية</string>
     <string name="bookmark.kind.favorite">مفضلة</string>
     <string name="bookmark.kind.note">ملاحظة</string>
     <string name="bookmark.kind.quote">اقتباس</string>

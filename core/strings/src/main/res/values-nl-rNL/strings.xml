@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Bladwijzer bewerken</string>
     <string name="bookmark.empty.message">Houd tijdens het luisteren de bladwijzerknop ingedrukt om een moment te bewaren.</string>
     <string name="bookmark.empty.title">Nog geen bladwijzers</string>
+    <string name="bookmark.export">Bladwijzers exporteren</string>
+    <string name="bookmark.export_failed">Kan de bladwijzers niet exporteren</string>
     <string name="bookmark.kind.favorite">Favoriet</string>
     <string name="bookmark.kind.note">Notitie</string>
     <string name="bookmark.kind.quote">Citaat</string>

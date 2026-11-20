@@ -108,6 +108,8 @@
     <string name="bookmark.edit.title">Редагувати закладку</string>
     <string name="bookmark.empty.message">Щоб зберегти момент, утримуйте кнопку закладки під час прослуховування.</string>
     <string name="bookmark.empty.title">Закладок ще немає</string>
+    <string name="bookmark.export">Експортувати закладки</string>
+    <string name="bookmark.export_failed">Не вдалося експортувати закладки</string>
     <string name="bookmark.kind.favorite">Улюблене</string>
     <string name="bookmark.kind.note">Нотатка</string>
     <string name="bookmark.kind.quote">Цитата</string>

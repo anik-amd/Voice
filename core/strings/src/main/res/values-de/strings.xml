@@ -102,6 +102,8 @@
     <string name="bookmark.edit.title">Lesezeichen bearbeiten</string>
     <string name="bookmark.empty.message">Tippe beim Hören lange auf den Lesezeichen-Button, um einen Moment zu speichern.</string>
     <string name="bookmark.empty.title">Noch keine Lesezeichen</string>
+    <string name="bookmark.export">Lesezeichen exportieren</string>
+    <string name="bookmark.export_failed">Die Lesezeichen konnten nicht exportiert werden</string>
     <string name="bookmark.kind.favorite">Favorit</string>
     <string name="bookmark.kind.note">Notiz</string>
     <string name="bookmark.kind.quote">Zitat</string>

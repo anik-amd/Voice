@@ -105,6 +105,8 @@
     <string name="bookmark.edit.title">Modificare semn de carte</string>
     <string name="bookmark.empty.message">Ține apăsat butonul de semn de carte în timp ce asculți pentru a salva un moment.</string>
     <string name="bookmark.empty.title">Încă nu ai semne de carte</string>
+    <string name="bookmark.export">Exportă semnele de carte</string>
+    <string name="bookmark.export_failed">Semnele de carte nu au putut fi exportate</string>
     <string name="bookmark.kind.favorite">Favorit</string>
     <string name="bookmark.kind.note">Notă</string>
     <string name="bookmark.kind.quote">Citat</string>

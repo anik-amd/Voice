@@ -105,6 +105,8 @@
     <string name="bookmark.edit.title">Canvia el punt de llibre</string>
     <string name="bookmark.empty.message">Manteniu premut el botó de punt de llibre mentre escolteu per desar un moment.</string>
     <string name="bookmark.empty.title">Encara no hi ha punts de llibre</string>
+    <string name="bookmark.export">Exporta els punts de llibre</string>
+    <string name="bookmark.export_failed">No s\'han pogut exportar els punts de llibre</string>
     <string name="bookmark.kind.favorite">Preferit</string>
     <string name="bookmark.kind.note">Nota</string>
     <string name="bookmark.kind.quote">Cita</string>

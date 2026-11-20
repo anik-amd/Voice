@@ -350,6 +350,18 @@ class BookmarkViewModel(
     }
   }
 
+  fun onExportClick() {
+    val book = book ?: return
+    scope.launch {
+      viewEffectChannel.send(
+        BookmarkViewEffect.Export(
+          markdown = bookmarksMarkdown(book, bookmarks),
+          fileName = bookmarksFileName(book.name),
+        ),
+      )
+    }
+  }
+
   fun onCloseClick() {
     if (leaving) return
     leaving = true

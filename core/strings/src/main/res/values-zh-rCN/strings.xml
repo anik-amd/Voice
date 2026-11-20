@@ -99,6 +99,8 @@
     <string name="bookmark.edit.title">编辑书签</string>
     <string name="bookmark.empty.message">收听时长按书签按钮，即可保存当前时刻。</string>
     <string name="bookmark.empty.title">还没有书签</string>
+    <string name="bookmark.export">导出书签</string>
+    <string name="bookmark.export_failed">无法导出书签</string>
     <string name="bookmark.kind.favorite">收藏</string>
     <string name="bookmark.kind.note">笔记</string>
     <string name="bookmark.kind.quote">摘录</string>

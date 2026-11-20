@@ -99,6 +99,8 @@
     <string name="bookmark.edit.title">Edit markah</string>
     <string name="bookmark.empty.message">Tekan lama tombol markah saat mendengarkan untuk menyimpan momen.</string>
     <string name="bookmark.empty.title">Belum ada markah</string>
+    <string name="bookmark.export">Ekspor markah</string>
+    <string name="bookmark.export_failed">Markah tidak dapat diekspor</string>
     <string name="bookmark.kind.favorite">Favorit</string>
     <string name="bookmark.kind.note">Catatan</string>
     <string name="bookmark.kind.quote">Kutipan</string>

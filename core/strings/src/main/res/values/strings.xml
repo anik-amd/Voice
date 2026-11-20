@@ -188,6 +188,10 @@
     <string name="bookmark.edit.title">Edit bookmark</string>
     <string name="bookmark.empty.message">Long press the bookmark button while listening to save a moment.</string>
     <string name="bookmark.empty.title">No bookmarks yet</string>
+    <!-- Action on the bookmark screen. Saves all bookmarks to a Markdown file. -->
+    <string name="bookmark.export">Export bookmarks</string>
+    <!-- Snackbar message shown when the phone cannot write the Markdown file. -->
+    <string name="bookmark.export_failed">Could not export the bookmarks</string>
     <string name="bookmark.kind.favorite">Favorite</string>
     <string name="bookmark.kind.note">Note</string>
     <string name="bookmark.kind.quote">Quote</string>

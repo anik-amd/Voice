@@ -105,6 +105,8 @@
     <string name="bookmark.edit.title">עריכת סימנייה</string>
     <string name="bookmark.empty.message">לחיצה ארוכה על כפתור הסימנייה בזמן ההאזנה תשמור את הרגע.</string>
     <string name="bookmark.empty.title">אין סימניות עדיין</string>
+    <string name="bookmark.export">ייצוא סימניות</string>
+    <string name="bookmark.export_failed">לא ניתן לייצא את הסימניות</string>
     <string name="bookmark.kind.favorite">מועדף</string>
     <string name="bookmark.kind.note">הערה</string>
     <string name="bookmark.kind.quote">ציטוט</string>
