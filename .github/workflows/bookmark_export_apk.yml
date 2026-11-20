@@ -33,6 +33,8 @@ jobs:
         run: ./gradlew spotlessCheck
       - name: Test the bookmark module
         run: ./gradlew :features:bookmark:testDebugUnitTest
+      - name: Test the locales
+        run: ./gradlew :app:testFreeDebugUnitTest --tests voice.app.LocaleConfigTest
       - name: Build the free debug APK
         run: ./gradlew :app:assembleFreeDebug
       - name: Upload the APK
