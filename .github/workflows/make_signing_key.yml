@@ -1,0 +1,34 @@
+name: Make the signing key
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  key:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate the key
+        env:
+          STORE_PASSWORD: ${{ secrets.SIGNING_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.SIGNING_KEY_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.SIGNING_KEY_ALIAS }}
+        run: |
+          keytool -genkeypair \
+            -keystore signing.keystore \
+            -alias "$KEY_ALIAS" \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass "$STORE_PASSWORD" \
+            -keypass "$KEY_PASSWORD" \
+            -dname "CN=Voice Personal, O=Personal, C=DE"
+          keytool -list -keystore signing.keystore -storepass "$STORE_PASSWORD"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: signing-keystore
+          path: signing.keystore
+          if-no-files-found: error
+          retention-days: 1
